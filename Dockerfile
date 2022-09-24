@@ -6,7 +6,7 @@ RUN apt-get -y update
 RUN apt-get -y install git
 
 RUN mkdir repo 
-RUN git clone https://github.com/Nithish0226/cl-lstm.git
+RUN git clone https://github.com/sujatha0981/lstm-cl.git
 WORKDIR /lstm/cl-lstm 
 
 COPY requirements.txt requirements.txt
