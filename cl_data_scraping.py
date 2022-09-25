@@ -1,4 +1,5 @@
 
+import math
 import pandas as pd
 import datetime
 from dateutil import tz
@@ -88,4 +89,7 @@ def data_scrape1(latI,longI,cityNameI):
         df2 = pd.concat([df2, data])
     df2=df2.reset_index()
     df2=df2.drop(['index'], axis=1)
+    for i in range(len(df2)):
+        if math.isnan(df2.loc[i]['no2']):
+            df2=df2.drop(i)
     df2.to_csv("data/data_"+cityNameI+".csv", index=False)
