@@ -3,6 +3,13 @@ import os
 import pandas as pd
 import json 
 
+st.set_page_config(
+   page_title="Dataset",
+   page_icon="📂",
+   layout="wide",
+   initial_sidebar_state="expanded",
+)
+
 city=pd.read_csv('cities.csv')
 f = open("train_time.json")
 fd = json.load(f)

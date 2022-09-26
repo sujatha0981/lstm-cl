@@ -1,2 +1,1 @@
-# lstm-cl
-continous learning
+# cl-lstm

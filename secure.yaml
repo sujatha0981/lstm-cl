@@ -1,0 +1,13 @@
+cookie:
+  expiry_days: 10
+  key: some_signature_key
+  name: some_cookie_name
+credentials:
+  usernames:
+    sujatha:
+      email: sujatha@gmail.com
+      name: Sujatha
+      password: $2b$12$/3lqdDmT9.R3y9JCLCsCZeHYt8.J/S3wAYCei4TQE.f4iOi0IbYx2
+preauthorized:
+  emails:
+  - sujatha123@gmail.com
