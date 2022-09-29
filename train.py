@@ -5,7 +5,7 @@ from datetime import datetime
 import pandas as pd
 
 def main():
-    city=pd.read_csv('cities.csv')
+    city=pd.read_csv('cities_train.csv')
     for i in range(len(city.cityName)):
         #lat,logn,cityName
         data_scrape1(city.lat[i],city.long[i],city.cityName[i])
@@ -31,4 +31,3 @@ def train():
         if b["last_train_date"] !=str(a):
             main()
 
-train()

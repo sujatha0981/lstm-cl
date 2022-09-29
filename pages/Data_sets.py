@@ -10,7 +10,7 @@ st.set_page_config(
    initial_sidebar_state="expanded",
 )
 
-city=pd.read_csv('cities.csv')
+city=pd.read_csv('cities_predict.csv')
 f = open("train_time.json")
 fd = json.load(f)
 date=fd["last_train_date"]
