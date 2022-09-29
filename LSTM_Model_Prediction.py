@@ -1,5 +1,4 @@
 # import module
-from tkinter import W
 import streamlit as st
 import time
 import datetime
