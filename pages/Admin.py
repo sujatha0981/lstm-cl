@@ -16,7 +16,22 @@ st.set_page_config(
    layout="wide",
    initial_sidebar_state="expanded",
 )
-
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            footer:after {
+            content:'Developed by Sujatha'; 
+            visibility: visible;
+            display: block;
+            position: relative;
+            #background-color: red;
+            padding: 5px;
+            top: 2px;
+                 }
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
 hashed_passwords = stauth.Hasher(['123', '456']).generate()
 with open('./secure.yaml') as file:

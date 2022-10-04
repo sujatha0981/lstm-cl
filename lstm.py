@@ -9,8 +9,8 @@ from matplotlib import pyplot as plt
 from sklearn.preprocessing import StandardScaler
 import seaborn as sns
 from datetime import datetime
-
-
+from rn import fn
+import pickle
 
 def model_train(cityNameI):
     
@@ -38,6 +38,9 @@ def model_train(cityNameI):
     model1.fit(trainX, trainY, epochs=100, batch_size=7, validation_split=.1, verbose=1)
     os.popen("mkdir saved_model")
     model1.save('saved_model/lstm_model_'+cityNameI+'.h5')
+    accuracy = [fn(model1)]
+    with open("./saved_model/lstm_model_"+cityNameI+".pkl","wb") as file:
+        pickle.dump(accuracy, file)
 
 def model_prediction(cityNameI,no_of_days,pollutantValue):   
     df = pd.read_csv('data/data_'+cityNameI+'.csv')
